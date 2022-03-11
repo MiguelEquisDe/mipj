@@ -3,6 +3,7 @@
 @section('titulo', 'Listado de cursos')
 
 @section('contenido')
+
     <center>
         <h3>Listado de cursos disponibles</h3>
     </center>
@@ -16,17 +17,15 @@ usando la doble llave --}}
 
             <div class="col">
                 <div class="card" style="width: 18rem;">
-                    <center>
-                        <img src="{{ Storage::url($co->img) }}" class="card-img-top" alt="..." style="width: 50%;">
-                    </center>
+                    <img src="{{ Storage::url($co->img) }}" class="card-img-top mx-auto d-block" alt="..."
+                        style="width: 50%; margin: 5%;">
                     <div class="card-body">
-                        <li class="list-group-item">{{ $co->id }}</li>
                         <li class="list-group-item">{{ $co->nombre }}</li>
-                        <li class="list-group-item">{{ $co->description }}</li>
-                        <li class="list-group-item">{{ $co->created_at }}</li>
-                        <li class="list-group-item">{{ $co->updated_at }}</li>
+                        {{-- <li class="list-group-item">{{ $co->description }}</li> --}}
                         <br>
-                        <a href="#" class="btn btn-primary">Ver más</a>
+                        <center>
+                            <a href="/cursos/{{ $co->id }}" class="btn btn-dark">Yameteh!!!</a>
+                        </center>
                     </div>
                 </div>
             </div>

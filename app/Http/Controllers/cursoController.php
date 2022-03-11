@@ -61,7 +61,7 @@ class cursoController extends Controller
         //con esto ejecutamos el comando para guardar
 
         if ($request->hasfile('img')) {
-            $cursito-> img = $request->file('img')->store('public');
+            $cursito->img = $request->file('img')->store('public');
         }
 
         /*
@@ -79,7 +79,11 @@ class cursoController extends Controller
      */
     public function show($id)
     {
-        //
+        //creo un array con una informacion del registro
+        //del id que viajó en la solicitud
+        $cursito = curso::find($id);
+        //asocio el array al view usando compact
+        return view('cursos.show', compact('cursito'));
     }
 
     /**
