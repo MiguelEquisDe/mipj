@@ -8,7 +8,7 @@
     <center>
         <h3><b>Crear Nuevo Curso</b></h3>
     </center>
-    {{--se utiliza el comando enctype para subir archivos--}}
+    {{-- se utiliza el comando enctype para subir archivos --}}
     <form action="/cursos" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
@@ -23,11 +23,11 @@
             <label for="img"><b>Imagen del Curso</b></label>
             <input name="img" type="file" id="img">
         </div>
-        {{--<div class="form-group">
+        {{-- <div class="form-group">
             <label for="imagencurso"><b>Añadir Imagen</b></label>
             <br>
             <input name="imagen" type="file" id="imagencurso">
-        </div>--}}
+        </div> --}}
         <button type="submit" class="btn btn-danger"><b>Yamete Kudasai niyaaah</b></button>
     </form>
 @endsection

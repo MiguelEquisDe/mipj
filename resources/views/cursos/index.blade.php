@@ -24,7 +24,7 @@ usando la doble llave --}}
                         {{-- <li class="list-group-item">{{ $co->description }}</li> --}}
                         <br>
                         <center>
-                            <a href="/cursos/{{ $co->id }}" class="btn btn-dark">Yameteh!!!</a>
+                            <a href="/cursos/{{ $co->id }}" class="btn btn-dark">Yamete!!!</a>
                         </center>
                     </div>
                 </div>
