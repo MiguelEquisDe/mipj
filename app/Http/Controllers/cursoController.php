@@ -57,7 +57,7 @@ class cursoController extends Controller
         esto me permitira manipular la tabla
         */
         $cursito->nombre = $request->input('nombre');
-        $cursito->description = $request->input('descripcion');
+        $cursito->description = $request->input('description');
         //con esto ejecutamos el comando para guardar
 
         if ($request->hasfile('img')) {
@@ -117,6 +117,7 @@ class cursoController extends Controller
             $cursito->img = $request->file('img')->store('public');
         }
         $cursito->save();
+        return 'Actualización completa';
     }
 
     /**

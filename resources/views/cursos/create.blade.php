@@ -16,8 +16,8 @@
             <input name="nombre" id="nombrecurso" type="text" class="form-control" id="exampleInputEmail1">
         </div>
         <div class="form-group">
-            <label for="descripcioncurso"><b>Descripción del Curso</b></label>
-            <input name="descripcion" type="text" class="form-control" id="descripcioncurso">
+            <label for="descriptioncurso"><b>Descripción del Curso</b></label>
+            <input name="description" type="text" class="form-control" id="descriptioncurso">
         </div>
         <div class="form-group">
             <label for="img"><b>Imagen del Curso</b></label>

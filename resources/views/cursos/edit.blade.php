@@ -16,8 +16,8 @@
             <input name="nombre" id="nombrecurso" type="text" value="{{$cursito->nombre}}" class="form-control" id="exampleInputEmail1">
         </div>
         <div class="form-group">
-            <label for="descripcioncurso"><b>Modifiar Descripción</b></label>
-            <input name="descripcion" type="text" value="{{$cursito->description}}" class="form-control" id="descripcioncurso">
+            <label for="descriptioncurso"><b>Modifiar Descripción</b></label>
+            <input name="description" type="text" value="{{$cursito->description}}" class="form-control" id="descriptioncurso">
         </div>
         <div class="form-group">
             <label for="img"><b>Actualizar Imagen</b></label>
