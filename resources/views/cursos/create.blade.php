@@ -11,6 +11,15 @@
     {{-- se utiliza el comando enctype para subir archivos --}}
     <form action="/cursos" method="POST" enctype="multipart/form-data">
         @csrf
+        @if ($errors->any())
+            @foreach ($errors->all() as $alerta)
+            <div class="alert alert-danger" role="alert">
+                <ul>
+                <li><b>{{ $alerta }}</b></li>
+                </ul>
+            </div>
+            @endforeach
+        @endif
         <div class="form-group">
             <label for="nombrecurso"><b>Nombre del Curso</b></label>
             <input name="nombre" id="nombrecurso" type="text" class="form-control" id="exampleInputEmail1">
