@@ -40,17 +40,18 @@ class DocenteController extends Controller
     public function store(storeDocenteRequest $request)
     {
         $doc = new docente();
-        $doc->nombres = $request->input('nombre');
+        $doc->nombres = $request->input('nombres');
         $doc->apellido = $request->input('apellido');
         $doc->titulo = $request->input('titulo');
         $doc->cursoasociado = $request->input('curso');
 
 
         if ($request->hasfile('img')) {
-            $doc->img = $request->file('img')->store('public');
+            $doc->img = $request->file('img')->store('public/docentes');
         }
         $doc->save();
-        return 'Waw, lograste guardar';
+        $doc = docente::all();
+        return view('docentes.index', compact('doc'));
     }
 
     /**
@@ -89,10 +90,11 @@ class DocenteController extends Controller
         $doc = docente::find($id);
         $doc->fill($request->except('img'));
         if ($request->hasfile('img')) {
-            $doc->img = $request->file('img')->store('public');
+            $doc->img = $request->file('img')->store('public/docentes');
         }
         $doc->save();
-        return 'Actualización completa';
+        $doc = docente::all();
+        return view('docentes.index', compact('doc'));
     }
 
     /**
@@ -103,6 +105,14 @@ class DocenteController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $doc = docente::find($id);
+        $urlImagenBD = $doc->img;
+        $nombreImagen = str_replace('public/docentes/','\storage\docentes\\',$urlImagenBD);
+        //$rutaCompleta = public_path().$nombreImagen;
+        //unlink ($rutaCompleta);
+        //$doc ->delete();
+        //$doc = docente::all();
+        //return $nombreImagen;
+        return view('docentes.index', compact('doc'));
     }
 }

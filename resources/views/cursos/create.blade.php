@@ -29,6 +29,10 @@
             <input name="description" type="text" class="form-control" id="descriptioncurso">
         </div>
         <div class="form-group">
+            <label for="horas"><b>Duración del Curso</b></label>
+            <input name="horas" type="text" class="form-control" id="horas">
+        </div>
+        <div class="form-group">
             <label for="img"><b>Imagen del Curso</b></label>
             <input name="img" type="file" id="img">
         </div>

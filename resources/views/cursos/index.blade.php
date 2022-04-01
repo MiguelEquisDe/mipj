@@ -21,6 +21,8 @@ usando la doble llave --}}
                         style="width: 50%; margin: 5%;">
                     <div class="card-body">
                         <li class="list-group-item">{{ $co->nombre }}</li>
+                        <li class="list-group-item">{{ $co->horas }}</li>
+
                         {{-- <li class="list-group-item">{{ $co->description }}</li> --}}
                         <br>
                         <center>

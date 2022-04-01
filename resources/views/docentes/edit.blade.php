@@ -16,8 +16,8 @@
             <input name="img" type="file" value="{{$doc->img}}" id="img">
         </div>
         <div class="form-group">
-            <label for="nombre"><b>Modificar Nombre(s)</b></label>
-            <input name="nombre" id="nombre" type="text" value="{{$doc->nombres}}" class="form-control" id="exampleInputEmail1">
+            <label for="nombres"><b>Modificar Nombre(s)</b></label>
+            <input name="nombres" id="nombres" type="text" value="{{$doc->nombres}}" class="form-control" id="exampleInputEmail1">
         </div>
         <div class="form-group">
             <label for="apellido"><b>Modifiar Apellidos</b></label>

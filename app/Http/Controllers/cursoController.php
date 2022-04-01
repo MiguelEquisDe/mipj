@@ -43,40 +43,36 @@ class cursoController extends Controller
         con el metodo all() veo toda la información
         */
         //return $request->all();
-
         /*
         obtuvimos el dato de lo que el usuario envia por el imput
         cuyo name es 'nombre'*/
         //return $request->input('nombre');
-
         /*
         creamos una nueva estancia del modelo
         */
         $cursito = new curso();
-
         /*
         esto me permitira manipular la tabla
         */
         $cursito->nombre = $request->input('nombre');
         $cursito->description = $request->input('description');
+        $cursito->horas = $request->input('horas');
         //con esto ejecutamos el comando para guardar
-
         /*
         $validaciondatos = $request->validate([
             'nombre'=>'required|max:10',
             'img'=>'required|image'
         ]);
         */
-
         if ($request->hasfile('img')) {
-            $cursito->img = $request->file('img')->store('public');
+            $cursito->img = $request->file('img')->store('public/cursos');
         }
-
         /*
         con esto ejecutamos comando para guardar
         */
         $cursito->save();
-        return 'Waw, lograste guardar';
+        $cursito = curso::all();
+        return view('cursos.index', compact('cursito'));
     }
 
     /**
@@ -122,10 +118,11 @@ class cursoController extends Controller
         excepto lo que viene desde el imput llamado imagen*/
         $cursito->fill($request->except('img'));
         if ($request->hasfile('img')) {
-            $cursito->img = $request->file('img')->store('public');
+            $cursito->img = $request->file('img')->store('public/cursos');
         }
         $cursito->save();
-        return 'Actualización completa';
+        $cursito = curso::all();
+        return view('cursos.index', compact('cursito'));
     }
 
     /**
@@ -136,6 +133,14 @@ class cursoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $cursito = curso::find($id);
+        $urlImagenBD = $cursito->img;
+        $nombreImagen = str_replace('public/cursos/','\storage\cursos\\',$urlImagenBD);
+        $rutaCompleta = public_path().$nombreImagen;
+        unlink ($rutaCompleta);
+        $cursito ->delete();
+        $cursito = curso::all();
+        //return $nombreImagen;
+        return view('cursos.index', compact('cursito'));
     }
 }

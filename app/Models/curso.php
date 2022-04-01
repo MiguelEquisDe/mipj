@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class curso extends Model
 {
-    protected $fillable = ['nombre','description','img'];
+    protected $fillable = ['nombre','description','img','horas'];
     use HasFactory;
 }

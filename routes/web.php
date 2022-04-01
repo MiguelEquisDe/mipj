@@ -5,7 +5,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\miprimerController;
 use App\Http\Controllers\heladosController;
 use App\Http\Controllers\ControladorPrecios;
+use App\Http\Controllers\cursoController;
 use App\Http\Controllers\DocenteController;
+use App\Http\Controllers\EstudianteController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -60,4 +63,6 @@ Route::get('precio/{art}/{s}', [ControladorPrecios::class, 'getIVA']);
 Route::resource('cursos', cursoController::class);
 
 Route::resource('docentes', DocenteController::class);
+
+Route::resource('estudiantes', EstudianteController::class);
 

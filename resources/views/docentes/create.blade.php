@@ -25,8 +25,8 @@
             <input name="img" type="file" id="img">
         </div>
         <div class="form-group">
-            <label for="nombre"><b>Nombre(s) del Docente</b></label>
-            <input name="nombre" id="nombre" type="text" class="form-control" id="exampleInputEmail1">
+            <label for="nombres"><b>Nombre(s) del Docente</b></label>
+            <input name="nombres" id="nombres" type="text" class="form-control" id="exampleInputEmail1">
         </div>
         <div class="form-group">
             <label for="apellido"><b>Apellidos del Docente</b></label>

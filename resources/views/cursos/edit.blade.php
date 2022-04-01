@@ -20,6 +20,10 @@
             <input name="description" type="text" value="{{$cursito->description}}" class="form-control" id="descriptioncurso">
         </div>
         <div class="form-group">
+            <label for="horas"><b>Modifiar Horas</b></label>
+            <input name="horas" type="text" value="{{$cursito->horas}}" class="form-control" id="horascurso">
+        </div>
+        <div class="form-group">
             <label for="img"><b>Actualizar Imagen</b></label>
             <input name="img" type="file" value="{{$cursito->img}}" id="img">
         </div>

@@ -17,9 +17,16 @@
         <div id="my-nav" class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Item 1 <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="http://127.0.0.1:8000/cursos">Cursos <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="http://127.0.0.1:8000/docentes">Docentes <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="http://127.0.0.1:8000/estudiantes">Docentes <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
+
         </div>
     </nav>
     <br>
